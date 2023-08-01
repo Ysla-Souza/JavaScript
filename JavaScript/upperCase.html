@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Formulário de Consulta de Curso:</h3>
+    <p>
+    <form name="formcurso" action="" method="post">
+        Digite seu Curso: <input type="text" name="formID" size="8" maxlength="4" /> (SIST)<p></p>
+        <input type="button" name="btt_validar" value="Validar" onclick="curso()" />
+        <input type="reset" name="btt_cancelar" value="Cancelar" />
+        <p></p>
+        Código do Curso: <input type="text" name="formCOD" size="15" maxlength="10" />
+    </form>
+    <script language="Javascript">
+        var idCurso;
+        function curso() {
+            idCurso = document.formcurso.formID.value;
+            if (idCurso.toUpperCase() == 'SIST') {
+                document.formcurso.formCOD.value = 'SIST001/FB';
+            }
+            else {
+                window.alert('Curso Inválido!');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
